@@ -1,0 +1,127 @@
+@charset "utf-8";
+
+/*common*/
+body {font-size: 14px;font-family: 'Roboto', 'Noto Sans KR', '맑은 고딕', 'Malgum Gothic', 'Dotum', sans-serif;}
+button {background: none;border: none;line-height: 1em;font: inherit;color: inherit;margin: 0;padding: 0;cursor: pointer;}
+.container {width: 1530px;margin: auto;}
+.clrfix:after {content: "";display: block;clear: both;}
+.blind {display: block;width: 0;height: 0;overflow: hidden;}
+
+/*loader*/
+.loader_bg {position: fixed;left: 0;top: 0;right: 0;bottom: 0;background: #FFF;}
+.loader {border: 16px solid #f3f3f3;border-top: 16px solid #3498db;border-radius: 50%;width: 120px;height: 120px;animation: loading 2s linear infinite;position: fixed;top: 50%;left: 50%;transform: translate(-50%,-50%);}
+@keyframes loading {
+  0% {transform: translate(-50%,-50%) rotate(0deg);}
+  100% {transform: translate(-50%,-50%) rotate(360deg);}
+}
+
+/*skip_nav*/
+.skip_nav a {position: absolute;left: 0;right: 0;top: -50px;padding: 10px 0;background: #3ee3e3;color: #FFF;text-align: center;}
+.skip_nav a:focus {top: 0;}
+
+/*header*/
+header {padding: 30px 3%;position: fixed;left: 0;right: 0;top: 0;z-index: 998;background: transparent;}
+header h1 {}
+header nav {float: right;}
+header nav #gnb li {display: inline-block;float: left;padding: 5px 20px;}
+header nav #gnb li a {font-size: 1.5em;color: #f1f1f1;transition: 0.5s;}
+header nav #gnb li a:hover {font-size: 1.7em;text-shadow: 0 0 10px #f1f1f1, 0 0 20px #f1f1f1, 0 0 40px #f1f1f1, 0 0 80px #f1f1f1, 0 0 120px #f1f1f1;}
+
+/*footer*/
+footer .footer_bg {height: 10vh;text-align: center;font-size: 0.9rem;line-height: 25px;padding-top: 15px;box-sizing: border-box;}
+footer .footer_bg p {}
+footer .footer_bg p.copyright {}
+
+/*main*/
+main section {height: 100vh;box-sizing: border-box;}
+
+/*intro*/
+main #intro {background: url(../img/bg_sea.jpg) no-repeat center;background-size: cover;display: flex;justify-self: center;align-items: center;}
+main #intro h3 {font-size: 6em;padding-left: 50px;color: #FFF;}
+main #intro .typing_demo {
+  width: 22ch;
+  animation: typing 4 steps(22), blink .5s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+@keyframes typing {
+  from {
+    width: 0
+  }
+}
+main #intro svg {font-weight: 500;max-width:600px;height:auto;display: block;margin: auto;}
+
+/*about*/
+main #about {background: #eceff1;position: relative;}
+main #about .about_left {float: left;margin: 230px 0 0 100px;position: relative;}
+main #about .about_left .about_img {width: 300px;display: block;background: url(../img/about_me_img.jpg) no-repeat center;background-size: cover;border-radius: 10px;box-shadow: 0 0 30px rgba(0,0,0,0.3);}
+main #about .about_left .click_me {font-size: 40px;transform: rotate(-20deg);position: absolute;bottom: 35px;right: 5px;color: #f1f1f1;transition: 1s;}
+main #about .about_left .click_me:hover {text-shadow: 0 0 10px #f1f1f1, 0 0 20px #f1f1f1, 0 0 40px #f1f1f1, 0 0 80px #f1f1f1, 0 0 120px #f1f1f1, 0 0 80px #f1f1f1, 0 0 40px #f1f1f1, 0 0 20px #f1f1f1, 0 0 10px #f1f1f1;}
+main #about .introduce {position: absolute;left: 50%;top: 50%;width: 1000px;height: 700px;transform: translate(-50%, -50%);border-radius: 30px;box-shadow: 0 0 30px rgba(0,0,0,0.3);background: #FFF;}
+main #about .introduce {border: 1px solid #000;text-align: center;padding-top: 100px;box-sizing: border-box;display: none;}
+main #about .introduce .close {position: absolute;right: 30px;top: 30px;}
+main #about .introduce .introduce_img {background: url(../img/header_logo.jpg);width: 150px;height: 150px;background-size: cover;border-radius: 75px;}
+main #about .introduce strong {display: block;font-weight: bold;font-size: 50px;margin-top: 20px;}
+main #about .introduce p {display: block;font-size: 20px;margin-top: 20px;line-height: 40px;}
+main #about .about_me {float: right;width: 1000px;margin: 200px 50px 0 0;height: 600px;background: #FFF;box-shadow: 0 0 30px rgba(0,0,0,0.3);padding: 50px;box-sizing: border-box;font-size: 16px;border-radius: 10px;}
+main #about .about_me h3 {font-size: 21px;border-left: 2px solid #000;padding-left: 10px;margin-bottom: 25px;}
+main #about .about_me li {line-height: 150%;padding-left: 12px;}
+main #about .about_me li em {display: inline-block;}
+main #about .about_me .l_side, .r_side {box-sizing: border-box;float: left;width: 430px;margin-right: 40px;height: 500px;}
+main #about .about_me .l_side div, .r_side div {margin-bottom: 50px;}
+main #about .about_me .l_side div:last-child {margin-bottom: 0;}
+main #about .about_me .l_side .profile em {width: 150px;}
+main #about .about_me .l_side .education em {margin-right: 10px;}
+main #about .about_me .l_side .career em {margin-right: 10px;}
+main #about .about_me .r_side {margin-right: 0;}
+main #about .about_me .r_side .skills em {width: 70px;}
+main #about .about_me .r_side .skills li {}
+main #about .about_me .r_side .skills .skill_bar {width: 100px;background: #fff;border: 1px solid #000;border-radius: 10px;display: inline-block;margin-bottom: 0;}
+main #about .about_me .r_side .skills .skill_bar span {display: block;background: #000;border-radius: 10px;height: 10px;}
+@keyframes bar {
+  0% {width: 0;}
+}
+main #about .about_me .r_side .skills li:nth-child(1) span {width: 90%;}
+main #about .about_me .r_side .skills li:nth-child(2) span {width: 80%;}
+main #about .about_me .r_side .skills li:nth-child(3) span {width: 70%;}
+main #about .about_me .r_side .skills li:nth-child(4) span {width: 50%;}
+
+/*portfolio*/
+main #portfolio {font-family: 'Samsung Sharp Sans', sans-serif;background: #eceff1;position: relative;}
+main #portfolio h3 {float: left;margin: 47vh 0 0 100px;font-size: 50px;font-weight: bold;}
+main #portfolio .pofol_img {position: absolute;width: 700px;height: 500px;left: 50%;top: 50%;transform: translate(-50%, -50%);border-radius: 20px;overflow: hidden;}
+main #portfolio .pofol_img li {width: 700px;height: 500px;position: absolute;left: 0;top: 0;}
+main #portfolio .pofol_img li:nth-child(1) {background: url(../img/bg_donga.png) no-repeat center;background-size: cover;z-index: 1;}
+main #portfolio .pofol_img li:nth-child(2) {background: url(../img/bg_jiran.png) no-repeat center;background-size: cover;}
+main #portfolio .pofol_img li:nth-child(3) {background: url(../img/bg_kakao.png) no-repeat center;background-size: cover;}
+main #portfolio .pofol_img li:nth-child(4) {background: url(../img/bg_bosung.png) no-repeat center;background-size: cover;}
+main #portfolio .pofol_list {float: right;margin: 50vh 50px 0 0;font-weight: bold;transform: translateY(-50%);width: 450px;}
+main #portfolio .pofol_list li {border-top: 2px solid #AAA;font-size: 16px;padding: 22px 0 22px 34px;width: 330px;box-sizing: border-box;float: right;}
+main #portfolio .pofol_list li.point {border-top: 2px solid #000;width: 450px;height: 100px;padding-left: 154px;transition: 0.5s}
+/* main #portfolio .pofol_list li:hover {width: 450px;padding-left: 154px;} */
+main #portfolio .pofol_list li strong {display: block;}
+main #portfolio .pofol_list li .sub {margin-top: 20px;display: none;}
+main #portfolio .pofol_list li:first-child .sub {display: block;}
+
+/*contact*/
+main #contact {background: #eceff1;box-sizing: border-box;height: 90vh;}
+main #contact .contact_me {margin: 150px 200px 0 200px;width: 1130px;border-radius: 40px;box-shadow: 0 0 30px rgba(0,0,0,0.3);background: #FFF;}
+main #contact .contact_me h3 {text-align: center;font-size: 2.5em;letter-spacing: 5px;font-family: 'Samsung Sharp Sans', sans-serif;padding-top: 50px;}
+main #contact .contact_me .communication_method {}
+main #contact .contact_me .communication_method .sns {display: flex;justify-content: center;align-items: center;height: 300px;}
+main #contact .contact_me .communication_method .sns li {padding: 10px;border: 1px solid #787878;border-radius: 20px;box-sizing: border-box;box-shadow: 0 0 30px rgba(0,0,0,0.3);margin-right: 200px;}
+main #contact .contact_me .communication_method .sns li:last-child {margin-right: 0;} 
+main #contact .contact_me .communication_method .sns li:hover {animation: sns 1s;}
+@keyframes sns {
+  0% {}
+  25% {margin-bottom: 20px;}
+  50% {margin-bottom: 10px;}
+  75% {margin-bottom: 20px;}
+  100% {margin-bottom: 0px;}
+}
+main #contact .contact_me .communication_method .sns li a {display: block;width: 64px;height: 64px;}
+main #contact .contact_me .communication_method .sns .insta a {background: url(../img/instagram.png);}
+main #contact .contact_me .communication_method .sns .kakao a {background: url(../img/kakao-talk.png);}
+main #contact .contact_me .communication_method .sns .resume a {background: url(../img/folder.png);}
+main #contact .contact_me .communication_method p {text-align: center;font-size: 1rem;line-height: 35px;padding-bottom: 50px;}
