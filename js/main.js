@@ -40,10 +40,10 @@ $(function() {
   //   });
   // });//each
 
-  // 로딩중~
-  // $(window).load(function() {
-  //   $('.loader').fadeOut();
-  // })
+  //로딩중~
+  $(window).ready(function() {
+    $('.loader_bg').delay(3000).fadeOut();
+  })
   //홈 스크롤 이벤트
   let navtop = $('nav').offset().top;
   $(window).scroll(function() {
